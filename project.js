@@ -91,58 +91,58 @@ const find = arrayFind();
 console.log(find);
 //8 ARRAY MANIPULATION (REDUCE)
 function add(...numbers) {
-    return numbers.reduce((sum, num) => sum + num, 0);
-  }
-  console.log(add(1, 2, 3));
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+console.log(add(1, 2, 3));
 //9 OBJECT MANIPULATION
 function transformUsers(users) {
-    return users.reduce((acc, user) => {
-        acc[user.id] = user;
-        return acc;
-    }, {});
+  return users.reduce((acc, user) => {
+    acc[user.id] = user;
+    return acc;
+  }, {});
 }
 const users = [
-    { id: 1, name: 'Sanjay', age: 20},
-    { id: 2, name: 'Bibek', age: 30 },
-    { id: 3, name: 'Anne', age: 22 }
+  { id: 1, name: "Sanjay", age: 20 },
+  { id: 2, name: "Bibek", age: 30 },
+  { id: 3, name: "Anne", age: 22 },
 ];
-console.log('Transformed users:', transformUsers(users)); 
+console.log("Transformed users:", transformUsers(users));
 //10 Classes and Objects
 class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    describe() {
-        return `${this.name} is ${this.age} years old.`;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  describe() {
+    return `${this.name} is ${this.age} years old.`;
+  }
 }
 
 //11 Inheritance
 class Student extends Person {
-    constructor(name, age, grade) {
-        super(name, age);
-        this.grade = grade;
-    }
-    study() {
-        return `${this.name} is studying.`;
-    }
+  constructor(name, age, grade) {
+    super(name, age);
+    this.grade = grade;
+  }
+  study() {
+    return `${this.name} is studying.`;
+  }
 }
-const person = new Person('Sahira Maharjan', 19);
-console.log(person.describe()); 
-const student = new Student('Sahil Maharjan', 20, 'A');
+const person = new Person("Sahira Maharjan", 19);
+console.log(person.describe());
+const student = new Student("Sahil Maharjan", 20, "A");
 console.log(student.describe());
-console.log(student.study());    
+console.log(student.study());
 //14 Complex Array Manipulation
 function getUniqueHobbies(users) {
-    return [...new Set(users.flatMap(user => user.hobbies))];
+  return [...new Set(users.flatMap((user) => user.hobbies))];
 }
 const hobbyUsers = [
-    { name: 'Manish', hobbies: ['reading', 'swimming'] },
-    { name: 'Aryam', hobbies: ['reading', 'cycling'] },
-    { name: 'Sabbu', hobbies: ['swimming', 'cycling'] }
+  { name: "Manish", hobbies: ["reading", "swimming"] },
+  { name: "Aryam", hobbies: ["reading", "cycling"] },
+  { name: "Sabbu", hobbies: ["swimming", "cycling"] },
 ];
-console.log('Unique hobbies:', getUniqueHobbies(hobbyUsers)); 
+console.log("Unique hobbies:", getUniqueHobbies(hobbyUsers));
 // Conceptual Questions
 /*
 1. Why are promises used in JavaScript? Explain the advantages of using promises over traditional callback functions.
@@ -184,4 +184,3 @@ console.log(counter());
     Destructuring: A way to unpack values from arrays or properties from objects into distinct variables.
     Modules: A way to split code into separate files and import/export functions, objects, or variables.
     Promises: A new way to handle asynchronous operations*/
-    hello
