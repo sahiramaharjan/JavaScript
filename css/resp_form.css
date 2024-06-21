@@ -1,49 +1,55 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #0665cc;
-  height: 80px;
-  width: 100%;
+body {
+  background-color: #f0f2f5;
 }
-.navbar .logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-}
-.navbar ul {
-  list-style: none;
-  display: flex;
-}
-.navbar ul li {
+header {
+  background-color:#00569A ;
+  height: 40px;
   color: white;
+  padding: 10px 20px;
 }
-.navbar .links a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 16px;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.navbar .links a:hover {
-  background-color: #575757;
-  border-radius: 4px;
+
+.brand {
+  font-size: 1.5em;
 }
+
 .hamburger {
   display: none;
-  flex-direction: column;
+  font-size: 1.5em;
   cursor: pointer;
 }
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background-color: #fff;
-  margin: 4px;
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-.body {
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list a {
+  color: #fff9f0;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +60,11 @@
 }
 .form-container {
   background: white;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  height: 400px;
+  width: 300px;
+  height: 350px;
 }
 h2 {
   text-align: center;
@@ -73,7 +79,7 @@ label {
   display: block;
 }
 input {
-  width: 100%;
+  width: 90%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -88,7 +94,7 @@ button {
   width: 285px;
   padding: 0.75rem;
   border: none;
-  background: #007bff;
+  background: #334eac;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -96,40 +102,46 @@ button {
   transition: background 0.3s ease;
 }
 button:hover {
-  background: #0056b3;
+  background: #7096d1;
 }
-@media screen and (max-width: 430px) {
-  .navbar {
-    width: 430px;
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-  .navbar ul {
+
+  .nav-list {
     display: none;
     flex-direction: column;
     width: 100%;
     position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #7096d1;
   }
-  .navbar ul li {
+
+  .nav-list li {
     text-align: center;
+    margin: 10px 0;
   }
-  .navbar ul li a {
-    padding: 10px;
-    width: 100%;
-  }
-  .hamburger {
+
+  .nav-list.active {
     display: flex;
-  }
-  .navbar.active ul {
-    display: flex;
-  }
-  .body {
-    width: 430px;
-    height: 150vh;
-    padding: 2px;
+    z-index: 1;
   }
   .form-container {
+    margin-top: 100px;
     width: 250px;
+    height: 300px;
   }
   button {
-    width: 185px;
+    width: 245px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .form-container {
+    width: 200px;
+  }
+  button {
+    width: 200px;
   }
 }

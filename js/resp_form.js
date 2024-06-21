@@ -1,8 +1,10 @@
-const hamburger = document.querySelector(".hamburger");
-const navbar = document.querySelector(".navbar");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
 
-hamburger.addEventListener("click", () => {
-  navbar.classList.toogle("active");
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
 });
 const form = document.getElementById("registerForm");
 const tooglePassword = document.getElementById("tooglePassword");

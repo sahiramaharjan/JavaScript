@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(https://i.pinimg.com/564x/13/36/ae/1336ae5845f6e180b769e97b87d03704.jpg);
+      }
+      header {
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        width: 100%;
+        padding: 15px;
+      }
+      .logo {
+        color: white;
+        font-size: 24px;
+        font-family: "Sofia", sans-serif;
+        font-weight: bold;
+      }
+      .buttons .favourite {
+        border: none;
+        color: white;
+        font-size: 25px;
+      }
+      .buttons .login {
+        border: none;
+        font-size: 25px;
+        color: white;
+      }
+      h1,
+      h2 {
+        color: white;
+        text-align: center;
+      }
+      .bookList {
+        border: 1px solid white;
+        color: white;
+        border-radius: 10px;
+        width: 600px;
+        height: 300px;
+        right: 60%;
+        bottom: 10%;
+        transform: translate(70%, 10%);
+        padding: 10px;
+        padding-left: 50px;
+      }
+
+      #btn {
+        border: 1px solid white;
+        width: 60px;
+        color: white;
+        width: 100px;
+        border-radius: 7px;
+      }
+      .highlight {
+       color: red;
+       text-decoration: underline;
+      }
+      .favorite {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">The Book Haven</div>
+      <div class="buttons">
+        <button class="favourite"><i class="ri-heart-line"></i></button
+        >&nbsp;&nbsp;&nbsp;
+        <button class="login"><i class="ri-login-box-line"></i></button>
+      </div>
+    </header>
+    <div class="bookList">
+      <i class="ri-book-shelf-line"></i>
+      <input type="text" id="search-bar" placeholder="Search for a book..." style="border: 1px solid white; border-radius: 5px;"/>
+      <button id="btn" onclick="searchBook()">
+        <i class="ri-search-line"></i>
+      </button>
+      </button>
+      <button id="btn" onclick="addBook()">
+        <i class="ri-file-add-line"></i>ADD
+      </button>
+      <button id="btn" onclick="removeBook()">
+        <i class="ri-delete-bin-line"></i> REMOVE
+      </button>
+      <ul id="book-list">
+        <li>To Kill a Mockingbird</li>
+        <li>The Great Gatsby</li>
+        <li>War and Peace</li>
+        <li>It Ends with Us</li>
+        <li>Me Before You</li>
+        <li>Living Fully</li>
+      </ul>
+    </div>
+    <script>
+      function addBook() {
+        const bookTitle = prompt("Enter the book title:");
+        if (bookTitle) {
+          let ul = document.getElementById("book-list");
+          let li = document.createElement("li");
+          li.textContent = bookTitle;
+          ul.appendChild(li);
+        }
+      }
+
+      function searchBook() {
+        const searchTerm = document
+          .getElementById("search-bar")
+          .value.toLowerCase();
+        const books = document
+          .getElementById("book-list")
+          .getElementsByTagName("li");
+        for (let i = 0; i < books.length; i++) {
+          const bookItem = books[i];
+          const bookText = bookItem.textContent.toLowerCase();
+          if (bookText.includes(searchTerm) && searchTerm !== "") {
+            bookItem.classList.add("highlight");
+          } else {
+            bookItem.classList.remove("highlight");
+          }
+        }
+      }
+
+      function removeBook() {
+        const ul = document.getElementById("book-list");
+        const lastBook = ul.lastElementChild;
+        if (lastBook) {
+          const confirmation = confirm(
+            "Are you sure you want to remove the last book?"
+          );
+          if (confirmation) {
+            ul.removeChild(lastBook);
+          }
+        } else {
+          alert("No books to remove.");
+        }
+      }
+
+      // function toggleFavorite(event) {
+      //   event.target.classList.toggle("favorite");
+      // }
+      // const bookListItems = document
+      //   .getElementById("book-list")
+      //   .getElementsByTagName("li");
+      // for (let i = 0; i < bookListItems.length; i++) {
+      //   bookListItems[i].addEventListener("click", toggleFavorite);
+      // }
+    </script>
+  </body>
+</html>

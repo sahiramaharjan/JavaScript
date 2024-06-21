@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e1dede;
+  color: #26303d;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+body.dark-theme {
+  background-color: #26303d;
+  color: #fff;
+}
+.navbar.dark-theme {
+  background-color: #26303d;
+  color: #e1dede;
+}
+.card-section.dark-theme .card {
+  background-color: #ffa518;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+footer.dark-theme {
+  background-color: #26303d;
+  color: #e1dede;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e1dede;
+  box-shadow: 0px 5px 5px #616060;
+}
+.nav-links{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+  color: #26303d;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar .nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.navbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.imagecarousel {
+  position: relative;
+  height: 233px;
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+}
+
+.imagecarousel img {
+  margin: 0px 25px;
+  box-shadow: 2px 2px 8px #8a8a8a;
+}
+
+.imagecarousel {
+  animation: bannermove 50s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.card-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ff6d1d;
+  padding: 1rem;
+  margin: 1rem;
+  width: 350px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 40px;
+}
+
+.card p {
+  margin-top: 40px;
+  text-align: justify;
+}
+footer {
+  background-color: #e1dede;
+  color: #26303d;
+  text-align: center;
+  padding: 1rem;
+}
+.footer-links a {
+  color: inherit;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+.nav-links a{
+    text-align: center;
+    margin: 10px 0;
+}
+.nav-links.active{
+    display: flex;
+    z-index: 1;
+}
+  .cards {
+    flex-direction: column;
+  }
+}
