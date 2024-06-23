@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GizmoMax - The Ultimate Tech Gadget</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body class="font-sans">
+    <header
+      class="bg-cover bg-center h-screen text-white flex flex-col justify-between relative"
+      style="
+        background-image: url('https://i.pinimg.com/564x/ca/88/e8/ca88e84919a962c55d1b8f659b908b80.jpg');
+      "
+    >
+      <nav class="p-5 flex justify-between items-center bg-opacity-50 bg-black">
+        <a href="#" class="text-2xl font-bold">GizmoHub</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#features" class="hover:text-gray-300">Features</a>
+          <a href="#reviews" class="hover:text-gray-300">Reviews</a>
+          <a href="#purchase" class="hover:text-gray-300">Purchase</a>
+          <a href="#contact" class="hover:text-gray-300">Contact</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden">
+            <i class="ri-menu-3-line text-2xl"></i>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-900 bg-opacity-50 text-white p-5 space-y-5"
+      >
+        <a href="#features" class="block">Features</a>
+        <a href="#reviews" class="block">Reviews</a>
+        <a href="#purchase" class="block">Purchase</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+      <div
+        class="flex flex-col items-start justify-start flex-grow text-center px-[90px] py-[300px]"
+      >
+        <a
+          href="#about"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+          >Learn More</a
+        >
+      </div>
+    </header>
+    <main>
+      <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-bold mb-4">Meet GizmoMax</h2>
+          <p class="text-xl mb-8">
+            Unleash the Power of Innovation with GizmoMax – Your Ultimate Tech
+            Companion! Experience the perfect blend of cutting-edge technology,
+            sleek design, and unparalleled performance. Whether you're a tech
+            enthusiast, a professional, or just someone who loves the latest
+            gadgets, GizmoMax is designed to elevate your lifestyle.
+          </p>
+          <div class="flex justify-center">
+            <img
+              src="https://i.pinimg.com/564x/3e/03/63/3e0363b36cec59819cf74c3fafdaac6d.jpg"
+              alt="GizmoMax"
+              class="w-1/2 rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Key Features</h2>
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrydmFHGf7ATBCtDBE7UNWE0uo3PM1sQ_hVZhk8YEU0by-1LCR-9rNiL0eFKxwttYkhSw&usqp=CAU"
+                  alt="Feature 1"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">
+                  Ultra-fast Performance
+                </h3>
+                <p class="text-gray-600">
+                  Powered by the latest processor to handle all your tasks
+                  effortlessly.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNyIDe1qKtPUD4IjPlymbeWkbHgWOrPQ-LcA&usqp=CAU"
+                  alt="Feature 2"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">Stunning Display</h3>
+                <p class="text-gray-600">
+                  Crystal clear 4K display for an immersive viewing experience.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXgV9sGtkyHbHaRmHAisPJcMxqolrDHZJYiw&usqp=CAU"
+                  alt="Feature 3"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">Long Battery Life</h3>
+                <p class="text-gray-600">
+                  Stay powered up all day with a battery that lasts up to 24
+                  hours.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="Feature 4"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">Sleek Design</h3>
+                <p class="text-gray-600">
+                  Elegantly designed to fit perfectly in your modern lifestyle.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="Feature 5"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">Advanced Security</h3>
+                <p class="text-gray-600">
+                  Keep your data safe with top-of-the-line security features.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img
+                  src="https://static.thenounproject.com/png/4073233-200.png"
+                  alt="Feature 6"
+                  class="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">Connectivity</h3>
+                <p class="text-gray-600">
+                  Seamless connectivity with all your devices and networks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="reviews" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12">Customer Reviews</h2>
+          <div class="flex space-x-6 overflow-x-auto">
+            <div
+              class="w-80 flex-shrink-0 bg-gray-100 p-6 rounded-lg shadow-lg text-center"
+            >
+              <p class="text-gray-600">
+                "This is the best gadget I've ever used!"
+              </p>
+              <span class="block mt-4 font-semibold">- Happy Customer</span>
+            </div>
+            <div
+              class="w-80 flex-shrink-0 bg-gray-100 p-6 rounded-lg shadow-lg text-center"
+            >
+              <p class="text-gray-600">
+                "Amazing features and great usability."
+              </p>
+              <span class="block mt-4 font-semibold">- Tech Enthusiast</span>
+            </div>
+            <!-- Add more reviews as needed -->
+          </div>
+        </div>
+      </section>
+      <section id="purchase" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-bold mb-12">Purchase GizmoMax</h2>
+          <div class="flex flex-wrap justify-center -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold mb-4">Insta 360 TITAN</h3>
+                <img class="pl-10 h-[230px]" src="https://i.pinimg.com/564x/3e/03/63/3e0363b36cec59819cf74c3fafdaac6d.jpg" alt="">
+                <p class="text-2xl font-bold mb-4">$15,278</p>
+                <a
+                  href="#"
+                  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-semibold mb-4">Insta360 Pro</h3>
+                <img class="pl-10 h-[230px]" src="data:image/jpeg;base64,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" alt="">
+                <p class="text-2xl font-bold mb-4">$3,499</p>
+                <a
+                  href="#"
+                  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <h3 class="text-xl font-semibold mb-4">Insta360 Pro2</h3>
+                  <img class="pl-10 h-[230px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzEah3djCdbXzURggFCjpj7kmVaUdwElcOp8TfKWYxJqkpH4kzMjeNTDh00hwuoKEYpU&usqp=CAU" alt="">
+                  <p class="text-2xl font-bold mb-4">$4,999</p>
+                  <a
+                    href="#"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+                    >Buy Now</a
+                  >
+                </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-bold mb-12">Contact Us</h2>
+          <form class="max-w-lg mx-auto" id="registerForm">
+            <div id="form-group" class="mb-4">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required
+              />
+            </div>
+            <div id="form-group" class="mb-4">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required
+              />
+            </div>
+            <div  id="form-group" class="mb-4">
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">GizmoHub</h4>
+                    <p>Innovating the future, one gadget at a time.</p>
+                </div>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                    <ul>
+                        <li class="mb-2"><a href="mailto:support@gizmohub.com" class="hover:underline">support@gizmohub.com</a></li>
+                        <li class="mb-2">Kupondole, Lalitpur, Nepal</li>
+                        <li class="mb-2">+977-5535387624</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="hover:underline"><i class="ri-facebook-circle-line text-2xl"></i></a></li>
+                        <li><a href="#" class="hover:underline"><i class="ri-twitter-x-line text-2xl"></i></a></li>
+                        <li><a href="#" class="hover:underline"><i class="ri-instagram-line text-2xl"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-6 border-t border-gray-700 pt-6">
+                <p>&copy; 2024 GizmoHub. All rights reserved. <a href="#" class="hover:underline">Privacy Policy</a> | <a href="#" class="hover:underline">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+const form = document.getElementById("registerForm");
+const username = document.getElementById("name");
+const email = document.getElementById("email");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (validateForm()) {
+    alert(
+      `Thank you for contacting us!\n\nnName: ${name.value}\nEmail: ${email.value}`
+    );
+  }
+});
+
+function validateForm() {
+  let isValid = true;
+
+  if (name.value.trim() === "") {
+    setError(name, "Your fullname is required");
+    isValid = false;
+  } else {
+    clearError(name);
+  }
+}
+
+  if (email.value.trim() === "") {
+    setError(email, "Email is required");
+    isValid = false;
+  } else if (!validateEmail(email.value)) {
+    setError(email, "Enter a valid email");
+    isValid = false;
+  } else {
+    clearError(email);
+  }
+function setError(input, message) {
+  const formGroup = input.closest("#form-group");
+  const errorDisplay = formGroup.querySelector(".error-message");
+  if (errorDisplay) {
+    errorDisplay.textContent = message;
+    errorDisplay.style.display = "block";
+  }
+}
+
+function clearError(input) {
+  const formGroup = input.closest("#form-group");
+  const errorDisplay = formGroup.querySelector(".error-message");
+  if (errorDisplay) {
+    errorDisplay.textContent = "";
+    errorDisplay.style.display = "none";
+  }
+}
+
+function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(String(email).toLowerCase());
+}
+
+    </script>
+  </body>
+</html>
